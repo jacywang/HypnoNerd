@@ -9,7 +9,7 @@
 #import "HypnosisViewController.h"
 #import "HypnosisView.h"
 
-@interface HypnosisViewController ()
+@interface HypnosisViewController () <UITextFieldDelegate>
 
 @end
 
@@ -24,8 +24,47 @@
     CGRect frame = [UIScreen mainScreen].bounds;
     HypnosisView *backgroundView = [[HypnosisView alloc] initWithFrame:frame];
     backgroundView.backgroundColor = [UIColor clearColor];
+    
+    CGRect textFieldRect = CGRectMake(40, 70, 240, 30);
+    UITextField *textField = [[UITextField alloc] initWithFrame:textFieldRect];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = @"Hypnotize me";
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.delegate = self;
+    
+    [backgroundView addSubview:textField];
+    
     self.view = backgroundView;
 
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self drawHypnoticeMessage:textField.text];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(void)drawHypnoticeMessage:(NSString *)message {
+    for (int i = 0; i < 20; i++) {
+        UILabel *messageLabel = [[UILabel alloc] init];
+        messageLabel.backgroundColor = [UIColor clearColor];
+        messageLabel.textColor = [UIColor whiteColor];
+        messageLabel.text = message;
+        
+        [messageLabel sizeToFit];
+        
+        int width = self.view.bounds.size.width - messageLabel.bounds.size.width;
+        int x = arc4random() % width;
+        
+        int height = self.view.bounds.size.height - messageLabel.bounds.size.height;
+        int y = arc4random() % height;
+        
+        CGRect frame = messageLabel.frame;
+        frame.origin = CGPointMake(x, y);
+        messageLabel.frame = frame;
+        
+        [self.view addSubview:messageLabel];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
