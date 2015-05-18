@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		9CCCCE211B0971AD00D9F972 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE201B0971AD00D9F972 /* main.m */; };
 		9CCCCE241B0971AD00D9F972 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE231B0971AD00D9F972 /* AppDelegate.m */; };
-		9CCCCE271B0971AD00D9F972 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE261B0971AD00D9F972 /* ViewController.m */; };
 		9CCCCE2A1B0971AD00D9F972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCCE281B0971AD00D9F972 /* Main.storyboard */; };
 		9CCCCE2C1B0971AD00D9F972 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCCE2B1B0971AD00D9F972 /* Images.xcassets */; };
 		9CCCCE2F1B0971AD00D9F972 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CCCCE2D1B0971AD00D9F972 /* LaunchScreen.xib */; };
 		9CCCCE3B1B0971AD00D9F972 /* HypnoNerdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE3A1B0971AD00D9F972 /* HypnoNerdTests.m */; };
+		9CCCCE461B0971E700D9F972 /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE451B0971E700D9F972 /* HypnosisView.m */; };
+		9CCCCE491B09727800D9F972 /* HypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE481B09727800D9F972 /* HypnosisViewController.m */; };
+		9CCCCE4C1B097B3C00D9F972 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCCCE4B1B097B3C00D9F972 /* ReminderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		9CCCCE201B0971AD00D9F972 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CCCCE221B0971AD00D9F972 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CCCCE231B0971AD00D9F972 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9CCCCE251B0971AD00D9F972 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9CCCCE261B0971AD00D9F972 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9CCCCE291B0971AD00D9F972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CCCCE2B1B0971AD00D9F972 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9CCCCE2E1B0971AD00D9F972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9CCCCE341B0971AD00D9F972 /* HypnoNerdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnoNerdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCCCE391B0971AD00D9F972 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CCCCE3A1B0971AD00D9F972 /* HypnoNerdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnoNerdTests.m; sourceTree = "<group>"; };
+		9CCCCE441B0971E700D9F972 /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		9CCCCE451B0971E700D9F972 /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		9CCCCE471B09727800D9F972 /* HypnosisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisViewController.h; sourceTree = "<group>"; };
+		9CCCCE481B09727800D9F972 /* HypnosisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisViewController.m; sourceTree = "<group>"; };
+		9CCCCE4A1B097B3C00D9F972 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		9CCCCE4B1B097B3C00D9F972 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +89,12 @@
 			children = (
 				9CCCCE221B0971AD00D9F972 /* AppDelegate.h */,
 				9CCCCE231B0971AD00D9F972 /* AppDelegate.m */,
-				9CCCCE251B0971AD00D9F972 /* ViewController.h */,
-				9CCCCE261B0971AD00D9F972 /* ViewController.m */,
+				9CCCCE4A1B097B3C00D9F972 /* ReminderViewController.h */,
+				9CCCCE4B1B097B3C00D9F972 /* ReminderViewController.m */,
+				9CCCCE471B09727800D9F972 /* HypnosisViewController.h */,
+				9CCCCE481B09727800D9F972 /* HypnosisViewController.m */,
+				9CCCCE441B0971E700D9F972 /* HypnosisView.h */,
+				9CCCCE451B0971E700D9F972 /* HypnosisView.m */,
 				9CCCCE281B0971AD00D9F972 /* Main.storyboard */,
 				9CCCCE2B1B0971AD00D9F972 /* Images.xcassets */,
 				9CCCCE2D1B0971AD00D9F972 /* LaunchScreen.xib */,
@@ -219,9 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CCCCE271B0971AD00D9F972 /* ViewController.m in Sources */,
+				9CCCCE461B0971E700D9F972 /* HypnosisView.m in Sources */,
 				9CCCCE241B0971AD00D9F972 /* AppDelegate.m in Sources */,
 				9CCCCE211B0971AD00D9F972 /* main.m in Sources */,
+				9CCCCE491B09727800D9F972 /* HypnosisViewController.m in Sources */,
+				9CCCCE4C1B097B3C00D9F972 /* ReminderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

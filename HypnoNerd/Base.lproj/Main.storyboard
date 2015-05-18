@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T3Q-LP-sde">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Hypnotize-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="HypnosisViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,9 +18,81 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Hypnotize" image="Hypno" id="mq2-hf-wsm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="23" y="94"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eyT-70-r7h">
+            <objects>
+                <tabBarController id="T3Q-LP-sde" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="QuA-wR-uOM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="vgF-kb-EcQ"/>
+                        <segue destination="WTO-qv-294" kind="relationship" relationship="viewControllers" id="RVZ-44-AAi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dF-su-tT8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-824" y="321"/>
+        </scene>
+        <!--Reminder-->
+        <scene sceneID="gzM-3x-kim">
+            <objects>
+                <viewController id="WTO-qv-294" customClass="ReminderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VYn-zL-1Q0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ulg-0O-IdB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yj9-RN-qdo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eh1-32-Wra">
+                                <rect key="frame" x="16" y="100" width="568" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="453606529.94211799">
+                                    <!--2015-05-18 01:48:49 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-hE-Xac">
+                                <rect key="frame" x="259" y="285" width="83" height="30"/>
+                                <state key="normal" title="Remind Me!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addReminder:" destination="WTO-qv-294" eventType="touchUpInside" id="oUj-Mx-sGS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ScX-hE-Xac" secondAttribute="centerY" id="8oq-Di-KVi"/>
+                            <constraint firstItem="eh1-32-Wra" firstAttribute="leading" secondItem="yj9-RN-qdo" secondAttribute="leading" constant="16" id="Iua-lD-HAx"/>
+                            <constraint firstItem="eh1-32-Wra" firstAttribute="top" secondItem="yj9-RN-qdo" secondAttribute="topMargin" constant="100" id="RnN-Gs-Bdg"/>
+                            <constraint firstAttribute="centerX" secondItem="eh1-32-Wra" secondAttribute="centerX" id="cJp-Ln-7ac"/>
+                            <constraint firstAttribute="trailing" secondItem="eh1-32-Wra" secondAttribute="trailing" constant="16" id="mXc-R9-Btt"/>
+                            <constraint firstAttribute="centerX" secondItem="ScX-hE-Xac" secondAttribute="centerX" id="qYe-7X-YTo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reminder" image="Time" id="7W9-9D-xg5"/>
+                    <connections>
+                        <outlet property="datePicker" destination="eh1-32-Wra" id="RVw-Gg-FyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xm3-eS-rf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="761"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hypno" width="30" height="30"/>
+        <image name="Time" width="30" height="30"/>
+    </resources>
 </document>
